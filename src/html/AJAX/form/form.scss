@@ -1,0 +1,19 @@
+.ajax-form {
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding-top: 0 !important;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  input {
+    margin-bottom: 20px;
+  }
+}

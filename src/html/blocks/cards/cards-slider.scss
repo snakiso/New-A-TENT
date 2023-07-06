@@ -1,0 +1,29 @@
+.cards-slider {
+  overflow: hidden;
+  position: relative;
+
+  @include mobile {
+    padding: 0 15px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 11px;
+      height: 24px;
+      background-repeat: no-repeat;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      background-image: url(../img/cards/cards-slider-arrow-left.png);
+      left: 2px;
+    }
+
+    &::after{
+      background-image: url(../img/cards/cards-slider-arrow-right.png);
+      right: 2px;
+    }
+  }
+}

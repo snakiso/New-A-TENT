@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  position: relative;
+}
+
+.main-bg {
+  background: url(../img/designs/designs-bg.png);
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 768px) {
+    background: none;
+  }
+}
+
+.decor-bg {
+  background-color: rgba(244, 244, 244, 0.69);
+  position: absolute;
+  height: 820px;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.ff-play {
+  font-family: 'Play', sans-serif;
+}
+
+.ff-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.ff-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ff-work-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.ff-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+@import '../scss/breakpoints';
+@import '../scss/vars';
+@import '../scss/layout';
+@import '../scss/wrapper';
+@import '../scss/magnific-popup';
+@import '../scss/animation';
+@import '../scss/title';
+@import '../scss/offsets';
+@import '../html/blocks/cards/cards';
+@import '../html/blocks/cards/cards-slider';
+@import '../html/common/cookies/cookies';
+@import '../html/AJAX/form/form';
+@import '../html/common/menu/menu';
+@import '../html/common/header/header';
+@import '../html/main-page/hero/hero';
+@import '../html/main-page/info/info';
+@import '../html/main-page/widget/widget';
