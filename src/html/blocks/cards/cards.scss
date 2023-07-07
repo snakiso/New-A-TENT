@@ -5,6 +5,10 @@
       box-shadow: none;
       border: 1px solid #D7D7D7;
 
+      .cards__item-inner-container {
+        padding: 14px;
+      }
+
       .cards__img {
         opacity: .1;
       }
@@ -28,6 +32,10 @@
         box-shadow: none;
         border: 1px solid #D7D7D7;
 
+        .cards__item-inner-container {
+          padding: 14px;
+        }
+
         .cards__img {
           opacity: .1;
         }
@@ -44,63 +52,20 @@
   }
 
   &_news {
-    border: none;
-    margin-bottom: 45px;
-
-    &:hover {
-      box-shadow: none;
-
-      .cards__link_invisible {
-        opacity: 1;
-      }
-
-      .cards__title {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &__item {
-    position: relative;
-    display: block;
-    border: 1px solid #D7D7D7;
-    transition: all ease-in .2s;
-    margin-bottom: $offset-big;
-    height: auto;
-    overflow-x: hidden;
-
-    &:hover {
-      // border: 1px solid rgba(255, 255, 255, 0);
-      box-shadow: 8px 8px 11px 0px rgba(40, 55, 85, 0.17);
-    }
-
-    &_download {
-
-
-      &:hover {
-        box-shadow: none;
-        border: 1px solid #D7D7D7;
-
-        .cards__img {
-          opacity: .1;
-        }
-
-        .cards__download {
-          opacity: 1;
-        }
-
-        .cards__title {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    &_news {
+    .cards__item {
       border: none;
-      margin-bottom: 45px;
 
       &:hover {
         box-shadow: none;
+        border: none;
+
+        .cards__item-inner-container {
+          padding: 14px;
+        }
+
+        .cards__item {
+          border: none !important;
+        }
 
         .cards__link_invisible {
           opacity: 1;
@@ -111,23 +76,29 @@
         }
       }
     }
+  }
 
-    &_video {
-      &:hover {
-        box-shadow: none;
-        border: 1px solid #D7D7D7;
+  &__item {
+    position: relative;
+    display: block;
+    border: 1px solid #D7D7D7;
+    transition: box-shadow .2s;
+    margin-bottom: $offset-big;
+    height: auto;
+    overflow-x: hidden;
 
-        .cards__img {
-          opacity: .1;
-        }
+    &:hover {
+      border: none;
+      border-bottom: 1px solid #f3f1f1;
+      border-top: 1px solid #f3f1f1;
+      box-shadow: 4px 4px 25px 0px rgba(40, 55, 85, 0.12);
 
-        .cards__play {
-          opacity: 1;
-        }
+      .cards__img {
+        transform: scale(1.03);
+      }
 
-        .cards__title {
-          text-decoration: underline;
-        }
+      .cards__item-inner-container {
+        padding: 14px 15px;
       }
     }
   }
@@ -137,7 +108,7 @@
     max-height: 420px;
     object-fit: cover;
     display: block;
-    transition: ease-in .2s;
+    transition: all .2s;
 
 
 
@@ -242,6 +213,7 @@
   &__img-block {
     background-color: rgba(40, 55, 85, 0.89);
     position: relative;
+    overflow: hidden;
   }
 
   &__download {
@@ -270,7 +242,7 @@
     }
   }
 
-  &__filesize{
+  &__filesize {
     visibility: hidden;
   }
 
@@ -369,9 +341,8 @@
       }
     }
 
-    &__filesize{
+    &__filesize {
       visibility: visible;
     }
   }
 }
-
