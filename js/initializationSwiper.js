@@ -11,6 +11,7 @@ function initSwiperCategory() {
       slidesPerView: 1,
       spaceBetween: 30,
       autoWidth: false,
+      freemode: true,
       // centeredSlides: true,
     });
   } else if (screenWidth >= 600 && swiper != undefined) {

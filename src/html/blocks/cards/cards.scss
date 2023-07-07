@@ -1,14 +1,46 @@
-.card {
-  position: relative;
-  display: block;
-  border: 1px solid #D7D7D7;
-  transition: all ease-in .2s;
-  margin-bottom: $offset-big;
-  height: auto;
+.cards {
 
-  &:hover {
-    border: 0px solid white;
-    box-shadow: 8px 8px 11px 0px rgba(40, 55, 85, 0.17);
+  &_video {
+    .cards__item:hover {
+      box-shadow: none;
+      border: 1px solid #D7D7D7;
+
+      .cards__img {
+        opacity: .1;
+      }
+
+      .cards__play {
+        opacity: 1;
+      }
+
+      .cards__title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &_download {
+    .cards__item {
+      margin-bottom: 48px;
+      min-height: 348px;
+
+      &:hover {
+        box-shadow: none;
+        border: 1px solid #D7D7D7;
+
+        .cards__img {
+          opacity: .1;
+        }
+
+        .cards__download {
+          opacity: 1;
+        }
+
+        .cards__title {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   &_news {
@@ -18,82 +50,113 @@
     &:hover {
       box-shadow: none;
 
-      .card__link_invisible {
+      .cards__link_invisible {
         opacity: 1;
       }
 
-      .card__title {
+      .cards__title {
         text-decoration: underline;
       }
     }
   }
 
-  &_download {
-    margin-bottom: 48px;
-    min-height: 348px;
+  &__item {
+    position: relative;
+    display: block;
+    border: 1px solid #D7D7D7;
+    transition: all ease-in .2s;
+    margin-bottom: $offset-big;
+    height: auto;
+    overflow-x: hidden;
 
     &:hover {
-      box-shadow: none;
-      border: 1px solid #D7D7D7;
+      // border: 1px solid rgba(255, 255, 255, 0);
+      box-shadow: 8px 8px 11px 0px rgba(40, 55, 85, 0.17);
+    }
 
-      .card__img {
-        opacity: .1;
-      }
+    &_download {
 
-      .card__download {
-        opacity: 1;
-      }
 
-      .card__title {
-        text-decoration: underline;
+      &:hover {
+        box-shadow: none;
+        border: 1px solid #D7D7D7;
+
+        .cards__img {
+          opacity: .1;
+        }
+
+        .cards__download {
+          opacity: 1;
+        }
+
+        .cards__title {
+          text-decoration: underline;
+        }
       }
     }
-  }
 
-  &_video {
-    &:hover {
-      box-shadow: none;
-      border: 1px solid #D7D7D7;
+    &_news {
+      border: none;
+      margin-bottom: 45px;
 
-      .card__img {
-        opacity: .1;
+      &:hover {
+        box-shadow: none;
+
+        .cards__link_invisible {
+          opacity: 1;
+        }
+
+        .cards__title {
+          text-decoration: underline;
+        }
       }
+    }
 
-      .card__play {
-        opacity: 1;
-      }
+    &_video {
+      &:hover {
+        box-shadow: none;
+        border: 1px solid #D7D7D7;
 
-      .card__title {
-        text-decoration: underline;
+        .cards__img {
+          opacity: .1;
+        }
+
+        .cards__play {
+          opacity: 1;
+        }
+
+        .cards__title {
+          text-decoration: underline;
+        }
       }
     }
   }
 
   &__img {
-    width: 100%;
+    width: 101%;
     max-height: 420px;
     object-fit: cover;
     display: block;
     transition: ease-in .2s;
+
+
 
     &_max-height-256 {
       max-height: 256px;
     }
   }
 
-  &__blue-line {
-    width: 100%;
-    height: 8px;
-    background-color: $color-blue;
-  }
-
-  &__inner-container {
+  &__item-inner-container {
     display: flex;
     flex-direction: column;
     padding: 14px;
 
     &_min-height {
       min-height: 274px;
+    }
+
+    &_border {
+      border-top: 8px solid $color-blue;
     }
   }
 
@@ -158,12 +221,6 @@
       right: -20px;
       top: 1px;
       transition: ease-in .2s;
-    }
-
-    &:hover {
-      &::after {
-        right: -25px;
-      }
     }
 
     &_invisible {
@@ -262,9 +319,25 @@
   }
 
   @include mobile {
-    grid-column: 12 span;
+    &_solutions-mail {
+      .cards__title {
+        display: none;
+      }
 
-    &__inner-container {
+      .cards__text {
+        display: none;
+      }
+    }
+
+    &__item {
+      grid-column: 12 span;
+    }
+
+    &__wrapper {
+      padding: 0;
+    }
+
+    &__item-inner-container {
       &_min-height {
         min-height: 1px;
       }
@@ -274,18 +347,8 @@
       max-height: 280px;
     }
 
-    &__title {
-      &_mobile-none {
-        display: none;
-      }
-    }
-
     &__text {
       padding-bottom: 0;
-
-      &_mobile-none {
-        display: none;
-      }
     }
 
     &__link {
@@ -303,3 +366,4 @@
     }
   }
 }
+
