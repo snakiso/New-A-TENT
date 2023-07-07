@@ -270,6 +270,10 @@
     }
   }
 
+  &__filesize{
+    visibility: hidden;
+  }
+
   &__play {
     cursor: pointer;
     position: absolute;
@@ -363,6 +367,10 @@
       &_invisible {
         opacity: 1;
       }
+    }
+
+    &__filesize{
+      visibility: visible;
     }
   }
 }

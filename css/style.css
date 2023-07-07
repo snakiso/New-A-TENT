@@ -914,6 +914,10 @@ img.mfp-img {
   margin-left: 11px;
 }
 
+.cards__filesize {
+  visibility: hidden;
+}
+
 .cards__play {
   cursor: pointer;
   position: absolute;
@@ -2254,6 +2258,10 @@ img.mfp-img {
 
   .cards__link_invisible {
     opacity: 1;
+  }
+
+  .cards__filesize {
+    visibility: visible;
   }
 
   .cards-slider {
