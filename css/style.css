@@ -636,15 +636,18 @@ img.mfp-img {
 }
 
 .title {
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
   margin-top: 12px;
   margin-bottom: 35px;
-  line-height: 128%;
+  line-height: 1.2em;
+  letter-spacing: -0.9px;
+  max-width: 1000px;
 }
 
 .margin-top {
-  margin-top: 60px;
+  margin-top: 45px;
 }
 
 .margin-bottom {
@@ -655,7 +658,7 @@ img.mfp-img {
   position: relative;
   display: block;
   border: 1px solid #D7D7D7;
-  transition: ease-in 0.2s;
+  transition: all ease-in 0.2s;
   margin-bottom: 60px;
   height: auto;
 }
@@ -667,6 +670,7 @@ img.mfp-img {
 
 .card_news {
   border: none;
+  margin-bottom: 45px;
 }
 
 .card_news:hover {
@@ -679,6 +683,11 @@ img.mfp-img {
 
 .card_news:hover .card__title {
   text-decoration: underline;
+}
+
+.card_download {
+  margin-bottom: 48px;
+  min-height: 348px;
 }
 
 .card_download:hover {
@@ -737,7 +746,7 @@ img.mfp-img {
 .card__inner-container {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 14px;
 }
 
 .card__inner-container_min-height {
@@ -756,6 +765,10 @@ img.mfp-img {
   margin-bottom: 30px;
 }
 
+.card__title_20px {
+  font-size: 20px;
+}
+
 .card__title_none-margin {
   margin-bottom: 0;
 }
@@ -770,7 +783,8 @@ img.mfp-img {
   font-family: Raleway;
   font-weight: 400;
   line-height: 1.33em;
-  padding-bottom: 28px;
+  padding-bottom: 35px;
+  margin-top: 10px;
 }
 
 .card__text_hidden {
@@ -783,7 +797,7 @@ img.mfp-img {
 
 .card__link {
   position: absolute;
-  bottom: 16px;
+  bottom: 12px;
   color: #081A3D;
   font-size: 16px;
   font-family: Raleway;
@@ -820,8 +834,8 @@ img.mfp-img {
   font-size: 14px;
   font-family: Lato;
   font-weight: 400;
-  line-height: 1.28em;
-  margin-bottom: 8px;
+  line-height: 1.8em;
+  margin-bottom: 4px;
 }
 
 .card__img-block {
@@ -1678,6 +1692,10 @@ img.mfp-img {
     padding-right: 15px;
   }
 
+  .title {
+    font-size: 30px;
+  }
+
   .card__title {
     font-size: 18px;
   }
@@ -1720,12 +1738,6 @@ img.mfp-img {
     font-size: 26px;
     max-width: 470px;
     margin-bottom: 45px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .title {
-    font-size: 40px;
   }
 }
 
@@ -2063,12 +2075,6 @@ img.mfp-img {
     background: none;
   }
 
-  .title {
-    font-family: "Play", sans-serif;
-    font-weight: 700;
-    padding-left: 15px;
-  }
-
   .cookies {
     height: 130px;
   }
@@ -2155,6 +2161,11 @@ img.mfp-img {
 
   .wrapper_card {
     padding: 0;
+  }
+
+  .title {
+    font-size: 22px;
+    padding-left: 15px;
   }
 
   .card {

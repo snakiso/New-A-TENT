@@ -1,9 +1,8 @@
-
 .card {
   position: relative;
   display: block;
   border: 1px solid #D7D7D7;
-  transition: ease-in .2s;
+  transition: all ease-in .2s;
   margin-bottom: $offset-big;
   height: auto;
 
@@ -14,6 +13,7 @@
 
   &_news {
     border: none;
+    margin-bottom: 45px;
 
     &:hover {
       box-shadow: none;
@@ -29,6 +29,9 @@
   }
 
   &_download {
+    margin-bottom: 48px;
+    min-height: 348px;
+
     &:hover {
       box-shadow: none;
       border: 1px solid #D7D7D7;
@@ -87,7 +90,7 @@
   &__inner-container {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 14px;
 
     &_min-height {
       min-height: 274px;
@@ -105,6 +108,10 @@
     text-transform: uppercase;
     margin-bottom: 30px;
 
+    &_20px {
+      font-size: 20px;
+    }
+
     &_none-margin {
       margin-bottom: 0;
     }
@@ -120,7 +127,8 @@
     font-family: Raleway;
     font-weight: 400;
     line-height: 1.33em;
-    padding-bottom: 28px;
+    padding-bottom: 35px;
+    margin-top: 10px;
 
     &_hidden {
       -webkit-line-clamp: 3;
@@ -133,7 +141,7 @@
 
   &__link {
     position: absolute;
-    bottom: 16px;
+    bottom: 12px;
     color: #081A3D;
     font-size: 16px;
     font-family: Raleway;
@@ -170,8 +178,8 @@
     font-size: 14px;
     font-family: Lato;
     font-weight: 400;
-    line-height: 1.28em;
-    margin-bottom: 8px;
+    line-height: 1.8em;
+    margin-bottom: 4px;
   }
 
   &__img-block {
