@@ -738,8 +738,8 @@ img.mfp-img {
 
 .cards__item:hover {
   border: none;
-  border-bottom: 1px solid #f3f1f1;
-  border-top: 1px solid #f3f1f1;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
   box-shadow: 4px 4px 25px 0px rgba(40, 55, 85, 0.12);
 }
 
