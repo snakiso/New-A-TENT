@@ -10,7 +10,7 @@
     display: block;
     max-width: 300px;
     margin-bottom: 10px;
-    line-height: 19px;
+    line-height: 1.18em;
     color: rgba(255, 255, 255, 0.6);
 
     &_white {
@@ -37,7 +37,7 @@
     text-transform: uppercase;
     color: white;
 
-    &_margin-30 {
+    &_margin {
       margin-bottom: 28px;
     }
 
@@ -64,11 +64,14 @@
     align-items: center;
     padding-bottom: 16px;
     font-size: 16px;
-    letter-spacing: 0.06em;
     color: white;
 
     img {
       margin-right: 15px;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -138,12 +141,6 @@
     }
   }
 
-  &__contacts-item {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   &__contacts-secondary {
     display: flex;
     position: absolute;
@@ -153,140 +150,131 @@
   &__contacts-secondary-link {
     margin-right: 25px;
   }
-}
 
-@media screen and (max-width: 1100px) {
-  .footer {
-    .wrapper {
+  @include tablet {
+
+    &__wrapper {
+      display: flex;
       flex-direction: column;
     }
 
-    .wrapper::before {
+    &__link {
       display: none;
-    }
-
-    &__designs-box {
-      justify-content: space-between;
-
-      a {
-        max-width: none;
-      }
-    }
-
-    &__designs-block:nth-child(3) {
-      max-width: none;
-    }
-
-    &__nav-bottom {
-      max-width: none;
-      justify-content: space-between;
-    }
-
-    &__gallery {
-      max-width: 135px;
-    }
-
-    &__a-tent {
-      max-width: 280px;
-      flex: 1;
-    }
-
-    &__politics {
-      position: absolute;
-      bottom: 25px;
-      font-size: 14px;
-    }
-
-    &__contacts {
-      margin-top: 50px;
-      padding-bottom: 60px;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    .wrapper {
-      padding: 25px 15px;
-    }
-
-    &__designs-block {
-      display: none;
-    }
-
-    &__title {
-      margin-bottom: 5px;
-      line-height: 24px;
-      font-size: 14px;
     }
 
     &__nav-bottom {
       flex-direction: column;
-      margin: 0;
-    }
-
-    &__solutions {
-      display: block !important;
-      color: white !important;
       margin-top: 0;
     }
 
-    &__projects,
-    &__gallery,
-    &__a-tent {
-      a:not(:first-child) {
-        display: none;
-      }
+    &__block {
+      display: flex;
+      flex-direction: column;
+    }
 
-      a {
-        margin-bottom: 5px;
+    &__title {
+      &_margin {
+        margin-bottom: 20px;
       }
     }
 
+    &__solutions {
+      font-size: 18px;
+      margin: 0 0 20px 0;
+    }
+
+    &__politics {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 24px;
+    }
+
     &__contacts {
-      position: relative;
+      left: 0;
+      margin-top: 10px;
       padding-bottom: 90px;
-      margin-top: 30px;
+    }
+
+    &__contacts-secondary {
+      bottom: 25px;
+    }
+  }
+
+  @include mobile {
+
+    &__wrapper {
+      padding: 24px 15px;
+    }
+
+    &__title {
+      font-size: 14px;
+      line-height: 1.71em;
+      margin-bottom: 10px;
+
+      &_margin {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__solutions {
+      font-size: 14px;
+      margin: 0 0 8px 0;
+    }
+
+    &__politics {
+      flex-direction: column;
+      z-index: 10;
+    }
+
+    &__politics-link {
+      margin-bottom: 8px;
 
       img {
         display: none;
       }
-
     }
 
-    &__contacts::before {
-      position: absolute;
-      content: '';
-      width: 80%;
-      height: 2px;
-      background-color: rgba(255, 255, 255, 0.45);
-      bottom: 85px;
+    &__year {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    &__developer-link {
+      font-size: 13px;
+    }
+
+    &__contacts {
+      left: 0;
+      margin-top: 10px;
+      padding-bottom: 145px;
+
+      &::before{
+        height: 1px;
+        width: 80%;
+        left: 0;
+        bottom: 85px;
+      }
     }
 
     &__contacts-item {
       font-size: 14px;
-      padding-bottom: 10px;
+      font-weight: 600;
+      line-height: 1.14em;
+      padding-bottom: 9px;
+      img {
+        display: none;
+      }
     }
-
 
     &__contacts-secondary {
-      display: none;
+      bottom: 100px;
     }
 
-    &__politics {
-      flex-direction: column;
-      font-size: 13px;
-
-      a {
-        margin-bottom: 10px;
-
-        img {
-          width: 7px;
-        }
-      }
-
-      span:not(:last-child) {
-        margin-bottom: 10px;
+    &__contacts-secondary-link {
+      margin-right: 15px;
+      img{
+        width: 32px;
       }
     }
   }
