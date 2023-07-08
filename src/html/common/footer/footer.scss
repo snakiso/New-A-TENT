@@ -2,209 +2,156 @@
   background-color: $color-dark-blue;
   font-size: 16px;
 
-  .wrapper {
-    position: relative;
-    display: flex;
-    padding: 45px 12px;
+  &__wrapper {
+    padding: 44px 30px;
   }
 
-  .wrapper::before {
-    content: '';
-    position: absolute;
-    height: calc(100% - 80px);
-    width: 1px;
-    background-color: white;
-    right: 330px;
+  &__link {
+    display: block;
+    max-width: 300px;
+    margin-bottom: 10px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.6);
+
+    &_white {
+      color: white;
+      margin-bottom: 17px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__nav {
-    max-width: 870px;
     flex: 1;
-    margin-right: 135px;
+    grid-column: 9 span;
   }
 
   &__title {
+    display: inline-block;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.03em;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     text-transform: uppercase;
-  }
+    color: white;
 
-  &__title:hover {
-    text-decoration: underline;
+    &_margin-30 {
+      margin-bottom: 28px;
+    }
+
+    &_size-16 {
+      font-size: 16px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__designs-box {
     display: flex;
-
-    a {
-      max-width: 300px;
-      margin-bottom: 10px;
-      line-height: 19px;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    a:first-child {
-      color: white;
-    }
-  }
-
-  &__designs-block {
-    max-width: 320px;
-    flex: 1;
-
-    a:nth-child(1) {
-      font-weight: 600;
-      margin-bottom: 18px;
-    }
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
-
-  &__designs-block:nth-child(3) {
-    max-width: 160px;
   }
 
   &__nav-bottom {
     display: flex;
-    margin-top: 18px;
+    margin-top: 20px;
   }
-
 
   &__contacts-item {
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
     font-size: 16px;
     letter-spacing: 0.06em;
+    color: white;
 
     img {
       margin-right: 15px;
     }
   }
 
-  &__contacts-secondary {
-    display: flex;
-    margin-top: 20px;
-
-    a:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
-
-  &__projects {
+  &__block {
     max-width: 320px;
-    flex: 1;
     margin-right: 26px;
-
-    a {
-      margin-bottom: 10px;
-      line-height: 20px;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    a:first-child {
-      color: white;
-      margin-bottom: 20px;
-    }
-  }
-
-  &__gallery {
-    max-width: 320px;
     flex: 1;
-    margin-right: 26px;
 
-    a {
-      margin-bottom: 10px;
-      line-height: 20px;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    a:first-child {
-      color: white;
-      margin-bottom: 20px;
-    }
-  }
-
-  &__a-tent {
-    a {
-      max-width: 300px;
-      margin-bottom: 10px;
-      line-height: 20px;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    a:first-child {
-      color: white;
-      margin-bottom: 20px;
+    &_width-160 {
+      max-width: 160px;
     }
   }
 
   &__solutions {
-    font-size: 15px;
-    margin-top: 33px;
-    color: white !important;
+    font-size: 16px;
+    margin-top: 25px;
   }
 
   &__politics {
     display: flex;
+    max-width: 600px;
     font-size: 14px;
     color: white;
-    margin-top: 20px;
+    margin-top: 16px;
+    justify-content: space-between;
+    padding-bottom: 38px;
+  }
 
-    a {
-      display: flex;
-      align-items: center;
-      margin-right: 30px;
+  &__politics-link {
+    color: white;
+    display: block;
 
-      img {
-        margin-left: 10px;
-      }
+    img {
+      width: 6px;
+      margin-left: 10px;
     }
+  }
 
-    span:not(:last-child) {
-      margin-right: 30px;
+  &__year {
+    font-size: 14px;
+    color: white;
+  }
+
+  &__developer-link {
+    font-size: 14px;
+    color: white;
+    margin-left: 5px;
+
+    &:hover {
+      color: $color-blue;
     }
   }
 
   &__contacts {
     position: relative;
+    grid-column: 3 span;
+    left: 11%;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.70);
+      left: -16%;
+
+    }
   }
 
-  &__contacts-secondary{
-    position: absolute;
-    bottom: 0;
+  &__contacts-item {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  .developer {
+  &__contacts-secondary {
     display: flex;
+    position: absolute;
+    bottom: 40px;
+  }
 
-    a {
-      margin-left: 5px;
-    }
-
-    a:hover {
-      color: $color-blue;
-    }
+  &__contacts-secondary-link {
+    margin-right: 25px;
   }
 }
 

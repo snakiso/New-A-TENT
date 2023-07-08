@@ -17,6 +17,7 @@ a {
 
 .main {
   position: relative;
+  overflow: hidden;
 }
 
 .main-bg {
@@ -67,10 +68,15 @@ a {
 @import '../scss/offsets';
 @import '../html/blocks/cards/cards';
 @import '../html/blocks/cards/cards-slider';
+@import '../html/blocks/button/button';
 @import '../html/common/cookies/cookies';
 @import '../html/AJAX/form/form';
 @import '../html/common/menu/menu';
 @import '../html/common/header/header';
+@import '../html/common/footer/footer';
+@import '../html/common/dropdown/dropdown';
 @import '../html/main-page/hero/hero';
 @import '../html/main-page/info/info';
 @import '../html/main-page/widget/widget';
+@import '../html/main-page/solutions/solution-slider';
+@import '../html/blocks/contacts/contacts';
