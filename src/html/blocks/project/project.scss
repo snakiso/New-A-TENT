@@ -1,0 +1,49 @@
+.project {
+  &__for {
+    background-color: $color-dark-blue;
+  }
+
+  &__for-wrapper {
+    padding: 60px 30px 40px 30px;
+  }
+
+  &__for-title {
+    color: #FFF;
+    letter-spacing: 0.013em;
+    display: block;
+    margin: 0 0 50px 0;
+  }
+
+  &__for-list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  &__for-item {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-left: 16px;
+    border-left: 3px solid $color-blue;
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 55px;
+    }
+  }
+
+  @include mobile {
+    &__for-list {
+      flex-direction: column;
+    }
+
+    &__for-item{
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+  }
+}

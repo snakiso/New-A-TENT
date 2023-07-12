@@ -35,10 +35,10 @@ const swiper1 = new Swiper('.solution-slider', {
   }
 });
 
-const swiper2 = new Swiper('.show__slider', {
+const swiper2 = new Swiper('.show__slider', { //Заменить кнопки
   navigation: {
     nextEl: '.solution-slider__next',
-    prevEl: '.solution-slider__prev',
+    prevEl: '.solution-slider__prev', 
   },
   slidesPerView: 1,
   centeredSlides: true,
@@ -81,13 +81,51 @@ var swiper3 = new Swiper(".clients__slider", {
   }
 });
 
-const swiper4 = new Swiper('.design-slider', {
+const swiper4 = new Swiper('.additional__slider', {
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.additional__slider-button-next',
+    prevEl: '.additional__slider-button-prev',
   },
   slidesPerView: 'auto',
-  spaceBetween: 10,
+  spaceBetween: 0,
+  autoWidth: false,
+  centeredSlides: true,
+  loop: true,
+  768: {
+    slidesPerView: 'auto',
+    freeMode: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+  }
+});
+
+const swiper5 = new Swiper('.our-projects__slider', {
+  navigation: {
+    nextEl: '.our-projects__slider-next',
+    prevEl: '.our-projects__slider-prev',
+  },
+  slidesPerView: 1,
+  centeredSlides: true,
+  spaceBetween: 50,
+  autoWidth: false,
+  autoHeight: false,
+  freeMode: false,
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      centeredSlides: false,
+    }
+  }
+});
+
+const swiper6 = new Swiper('.infinite-slider', {
+  navigation: {
+    nextEl: '.infinite-slider__next',
+    prevEl: '.infinite-slider__prev',
+  },
+  slidesPerView: 'auto',
+  spaceBetween: 0,
   autoWidth: false,
   centeredSlides: true,
   loop: true,

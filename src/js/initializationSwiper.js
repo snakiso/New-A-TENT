@@ -14,7 +14,7 @@ function initSwiperCategory() {
       freemode: true,
       // centeredSlides: true,
     });
-  } else if (screenWidth >= 600 && swiper != undefined) {
+  } else if (screenWidth >= 768 && swiper != undefined) {
     swiper.destroy();
     swiper = undefined;
   }

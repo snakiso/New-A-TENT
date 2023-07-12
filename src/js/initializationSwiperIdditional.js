@@ -1,22 +1,19 @@
-let swiper = undefined;
+let idditional = undefined;
 function initSwiperCategory() {
   var screenWidth = window.innerWidth;
-  if (screenWidth < 768 && swiper == undefined) {
-    swiper = new Swiper('.cards-slider', {
-      // pagination: {
-      //   el: '.swiper-pagination',
-      //   clickable: true,
-      // },
+  if (screenWidth < 768 && idditional == undefined) {
+    idditional = new Swiper('.additional-slider', {
+
       loop: true,
-      slidesPerView: 1,
+      slidesPerView: 'auto',
       spaceBetween: 30,
       autoWidth: false,
       freemode: true,
       // centeredSlides: true,
     });
-  } else if (screenWidth >= 768 && swiper != undefined) {
-    swiper.destroy();
-    swiper = undefined;
+  } else if (screenWidth >= 768 && idditional != undefined) {
+    idditional.destroy();
+    idditional = undefined;
   }
 }
 $(document).ready(function () {

@@ -1,0 +1,34 @@
+.breadcrumb {
+  margin-top: 40px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    color: #081A3D;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      position: relative;
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 18px;
+      background-image: url(../img/breadcrumb/arrow.svg);
+      margin: 0 16px;
+    }
+
+    &_unactive {
+      color: #BEBEBE;
+      pointer-events: none;
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

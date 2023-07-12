@@ -7,10 +7,18 @@
 <body class="body">
 
   <main class="main">
-    <section class="additional"></section>
+    <section class="additional additional-slider">
+      <div class="additional__wrapper swiper-wrapper wrapper margin-top">
+        @@include('html/blocks/additional/panels.html',{})
+        @@include('html/blocks/additional/floor.html',{})
+        @@include('html/blocks/additional/enteries.html',{})
+        @@include('html/blocks/additional/panorama.html',{})
+      </div>
+    </section>
   </main>
 
 </body>
 <script src="./js/slider.js"></script>
+<script src="./js/initializationSwiperIdditional.js"></script>
 
 </html>
