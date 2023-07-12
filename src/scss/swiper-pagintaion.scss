@@ -1,0 +1,21 @@
+.swiper-pagination {
+  position: relative;
+  margin-top: 60px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid $color-blue;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-blue;
+}
