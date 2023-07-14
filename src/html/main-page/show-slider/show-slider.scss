@@ -14,11 +14,7 @@
     position: relative;
     flex-shrink: 1;
 
-<<<<<<< HEAD
     &::before {
-=======
-    &::before{
->>>>>>> f1c1bcd5543f8327653b1cfb70e02835f170e17b
       position: absolute;
       content: '';
       width: 100%;
@@ -63,7 +59,6 @@
     max-width: 295px;
   }
 
-<<<<<<< HEAD
   &__slider-nav {
     position: relative;
     display: flex;
@@ -144,9 +139,5 @@
     &__slider-nav {
       display: none;
     }
-=======
-  &__slider-bottom {
-    margin-top: 30px;
->>>>>>> f1c1bcd5543f8327653b1cfb70e02835f170e17b
   }
 }
