@@ -2,10 +2,29 @@
   display: inline-block;
   font-size: 16px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 40px;
   color: white;
   background-color: $color-blue;
   padding: 16px 28px;
   cursor: pointer;
+
+  &_none-bg {
+    background: none;
+    border: 1px solid $color-blue;
+    color: $color-blue;
+    margin-left: 25px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    padding: 12px 20px;
+
+    &_none-bg {
+      margin-left: 0;
+    }
+  }
 }

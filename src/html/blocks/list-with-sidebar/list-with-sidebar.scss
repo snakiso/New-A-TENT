@@ -1,0 +1,239 @@
+.list-with-sidebar {
+  margin-top: 600px;
+  margin-bottom: 1600px;
+  position: relative;
+  background: #F6F6F6;
+  display: flex;
+  justify-content: space-between;
+
+  &__sidebar {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    right: 0;
+    background-color: $color-dark-blue;
+  }
+
+  &__sidebar-inner-container {
+    padding: 60px 80px 60px 60px;
+    top: 0px;
+  }
+
+  &__sidebar-list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__sidebar-item {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: $color-blue;
+    }
+
+    &_active {
+      .list-with-sidebar__sidebar-item-text {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  &__sidebar-item-number {
+    display: block;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 133%;
+  }
+
+  &__sidebar-item-text {
+    display: block;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 24px;
+    font-weight: 600;
+
+  }
+
+  &__container {
+    flex-grow: 1;
+    padding: 90px 30px;
+  }
+
+  &__box {
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 72px;
+
+    &:not(:last-child)::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      bottom: -36px;
+      background-color: #A4A4A4;
+    }
+  }
+
+  &__box-number {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-blue;
+  }
+
+  &__box-title {
+    color: #081A3D;
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    display: block;
+    font-weight: 700;
+    letter-spacing: -0.35px;
+    max-width: 760px;
+    margin-top: 5px;
+    margin-bottom: 28px;
+  }
+
+  &__box-text {
+    color: #081A3D;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 133%;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__description {
+    color: #081A3D;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 133%;
+  }
+
+  @include tablet {
+    &__sidebar-inner-container {
+      padding: 40px;
+    }
+
+    &__sidebar-item-number {
+      font-size: 16px;
+    }
+
+    &__sidebar-item-text {
+      font-size: 20px;
+    }
+
+    &__box-number {
+      font-size: 14px;
+    }
+
+    &__box-title {
+      font-size: 28px;
+    }
+
+    &__box-text {
+      font-size: 16px;
+    }
+  }
+
+  @include mobile {
+    &__sidebar {
+      display: none;
+    }
+
+    &__container {
+      padding: 0;
+    }
+
+    &__box {
+      overflow: hidden;
+      transition: all .2s;
+      margin-bottom: 12px;
+
+      &::before {
+        display: none;
+      }
+
+      &_unactive {
+        .list-with-sidebar__box-title {
+          &::before {
+            transform: translate(-50%, -50%);
+            transition: all .2s;
+          }
+        }
+      }
+    }
+
+    &__box-top {
+      display: flex;
+      align-items: center;
+      background-color: $color-dark-blue;
+      padding: 10px 15px;
+    }
+
+    &__box-number,
+    &__box-title {
+      color: white;
+      font-size: 14px;
+      line-height: 114%;
+      margin: 0;
+    }
+
+    &__box-number {
+      margin-right: 12px;
+      font-weight: 400;
+    }
+
+    &__box-title {
+      position: relative;
+      font-weight: 700;
+      width: 100%;
+      padding-right: 60px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        background-color: $color-blue;
+      }
+
+      &::after {
+        right: 0;
+        width: 14px;
+        height: 2px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &::before {
+        transition: all .2s;
+        right: 12px;
+        width: 2px;
+        height: 14px;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+
+    &__box-text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 128%;
+      padding: 0 15px;
+    }
+  }
+}

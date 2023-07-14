@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+@@include('html/common/head/head-2.html',{
+"title": "Главная"
+})
+
+<body class="body">
+  @@include('html/common/header/header.html',{})
+  <main class="main">
+    @@include('html/blocks/breadcrumb/breadcrumb.html',{})
+    <div class="page-description">
+      <div class="page-description__wrapper wrapper">
+        <div class="page-description__inner-container">
+          @@include('html/blocks/page-description/page-description.html',{})
+          <p class="page-description__text">А-ТЕНТ предоставляет в аренду высококачественные временные павильоны для
+            проведения мероприятий, коммерческого,
+            общественного и частного использования</p>
+        </div>
+        @@include('html/blocks/contacts-us/contacts-us.html',{})
+      </div>
+    </div>
+    @@include('html/blocks/cards/cards-construction.html',{})
+  </main>
+  @@include('html/common/footer/footer.html',{})
+</body>
+</html>

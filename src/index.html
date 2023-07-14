@@ -5,7 +5,6 @@
 })
 
 <body class="body">
-  @@include('html/common/menu/menu.html',{})
   @@include('html/common/header/header-2.html',{})
   <main class="main">
     @@include('html/main-page/hero/hero.html',{})
@@ -17,12 +16,19 @@
     </section>
     @@include('html/blocks/cards/cards-main-page.html',{})
     @@include('html/main-page/solutions/solution-slider.html',{})
+    @@include('html/main-page/show-slider/show-slider.html',{})
+    @@include('html/blocks/clients/clients.html',{})
+    @@include('html/main-page/director/director.html',{})
+    @@include('html/main-page/about/about.html',{})
+    @@include('html/main-page/exp/exp.html',{})
+    @@include('html/blocks/contacts/contacts.html',{})
   </main>
-    @@include('html/common/footer/footer.html',{})
+  @@include('html/common/footer/footer.html',{})
 </body>
 <script src="./js/jquery.magnific-popup.min.js"></script>
 <script src="./js/form.js"></script>
 <script src="./js/menu.js"></script>
 <script src="./js/animation.js"></script>
 <script src="./js/slider.js"></script>
+
 </html>

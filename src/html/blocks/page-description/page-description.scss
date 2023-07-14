@@ -1,0 +1,47 @@
+.page-description {
+  margin-top: 40px;
+
+  &__inner-container {
+    padding-right: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+    max-width: 700px;
+  }
+
+  &__text {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include mobile {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__inner-container {
+      padding-right: 0;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-top: 5px;
+      margin-bottom: 20px
+    }
+
+    &__text {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.3em;
+    }
+  }
+}

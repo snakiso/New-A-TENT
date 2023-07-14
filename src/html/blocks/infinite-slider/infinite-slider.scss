@@ -1,0 +1,81 @@
+.infinite-slider {
+  position: relative;
+  margin-top: 120px;
+
+  &__slide {
+    display: block;
+    max-width: 1070px;
+    opacity: 0.6;
+    transition: ease-in .2s;
+    margin: 0 15px;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 645px;
+  }
+
+  &__next,
+  &__prev {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 67px;
+    height: 67px;
+    background-color: white;
+    border: 1px solid $color-blue;
+    border-radius: 50%;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 24px;
+      background-image: url(../img/infinite-slider/infinite-slider-arrow.svg);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__next {
+    left: 18%;
+  }
+
+  &__prev {
+    right: 18%;
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+
+  @include tablet {
+    &__slide {
+      max-width: calc(100% - 160px);
+      margin: 0 10px;
+    }
+
+    &__next,
+    &__prev {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    margin: 50px 0;
+
+    &__slide {
+      max-width: calc(100% - 80px);
+      margin: 0 5px;
+    }
+  }
+}

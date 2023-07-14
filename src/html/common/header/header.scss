@@ -1,5 +1,26 @@
 .header {
 
+  &_opacity-bg {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+
+    .header__link {
+      color: white;
+    }
+
+    .header__search,
+    .header__burger-box {
+      background-color: transparent;
+    }
+
+    .header__burger-line,
+    .header__burger-line::before,
+    .header__burger-line::after {
+      background-color: white;
+    }
+  }
+
   &__wrapper {
     max-width: 1600px;
     height: 120px;
@@ -83,31 +104,55 @@
     bottom: -6px;
     top: auto;
   }
+
+  @include tablet {
+    &__wrapper {
+      padding: 0 15px;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__link {
+      display: none;
+    }
+  }
+
+  @include mobile{
+  &__wrapper {
+      height: 70px;
+      padding: 0 15px;
+    }
+  
+  
+  
+    &__search {
+      display: none;
+    }
+  
+    &__logo {
+      max-width: 120px;
+  
+      img {
+        width: 100%;
+      }
+    }
+  
+    &__burger-box {
+      width: 36px;
+      height: 34px;
+    }
+  
+    &__burger-line,
+    &__burger-line::after,
+    &__burger-line::before {
+      width: 22px;
+      height: 2px;
+    }
+  
+  }
 }
-
-.header-2 {
-  width: 100%;
-  position: absolute;
-  z-index: 3;
-
-  .header__link {
-    color: white;
-  }
-
-  .header__search,
-  .header__burger-box {
-    background-color: transparent;
-  }
-
-  .header__burger-line,
-  .header__burger-line::before,
-  .header__burger-line::after {
-    background-color: white;
-  }
-
-
-}
-
 
 .header-designs:hover {
   .drop-down-designs {
@@ -141,49 +186,4 @@
   }
 }
 
-@media screen and (max-width: 1300px) {
-  .header {
-    &__wrapper {
-      padding: 0 15px;
-    }
 
-    &__nav {
-      display: none;
-    }
-
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-
-    &__wrapper {
-      height: 70px;
-      padding: 0 15px;
-    }
-
-    &__search {
-      display: none;
-    }
-
-    &__logo {
-      max-width: 120px;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    &__burger-box {
-      width: 36px;
-      height: 34px;
-    }
-
-    &__burger-line,
-    &__burger-line::after,
-    &__burger-line::before {
-      width: 22px;
-      height: 2px;
-    }
-  }
-}
