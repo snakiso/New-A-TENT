@@ -35,6 +35,7 @@ const swiper1 = new Swiper('.solution-slider', {
   }
 });
 
+<<<<<<< HEAD
 const swiper2 = new Swiper('.show__slider', { 
   navigation: {
     nextEl: '.show__slider-next',
@@ -43,6 +44,16 @@ const swiper2 = new Swiper('.show__slider', {
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 0,
+=======
+const swiper2 = new Swiper('.show__slider', { //Заменить кнопки
+  navigation: {
+    nextEl: '.solution-slider__next',
+    prevEl: '.solution-slider__prev', 
+  },
+  slidesPerView: 1,
+  centeredSlides: true,
+  spaceBetween: 50,
+>>>>>>> f1c1bcd5543f8327653b1cfb70e02835f170e17b
   autoWidth: false,
   autoHeight: true,
   freeMode: false,
