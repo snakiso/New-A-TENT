@@ -42,14 +42,14 @@
   &__item {
     display: flex;
     align-items: center;
-    color: #081A3D;
+    color: $color-text;
     font-size: 18px;
     font-weight: 600;
 
-    img {
-      margin-right: 15px;
-    }
+  }
 
+  &__item-img {
+    margin-right: 15px;
   }
 
   &__feedback-block {
@@ -157,14 +157,15 @@
       border: none;
       margin-right: 0;
       margin-left: auto;
-      width: calc(100% - 30px);
+      width: 100%;
+      margin-left: 30px;
       border-radius: 60px 0 0 0;
     }
   }
 
   @include mobile {
     &__feedback-block {
-      width: calc(100% - 15px);
+      margin-left: 15px;
     }
 
     &__item {

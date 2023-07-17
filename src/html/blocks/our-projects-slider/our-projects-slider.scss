@@ -51,7 +51,7 @@
       height: 100%;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #D7D7D7;
+      background-color: $color-text;
     }
   }
 
@@ -107,7 +107,7 @@
 
 
     &__slider-item {
-      border: 1px solid #D7D7D7;
+      border: 1px solid $color-text;
 
       &::after {
         display: none;
@@ -121,7 +121,7 @@
     }
 
     &__slider-item-title {
-      color: #3E4145;
+      color: $color-dark-grey;
       position: relative;
       bottom: auto;
       left: auto;

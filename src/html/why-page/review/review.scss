@@ -1,0 +1,245 @@
+.review {
+  margin-top: 120px;
+  position: relative;
+  padding-bottom: 120px;
+
+  &__decor {
+    min-height: 640px;
+    width: 44%;
+    z-index: 1;
+    position: absolute;
+    background-color: $color-dark-blue;
+
+    @include desktop {
+      width: 44%;
+    }
+  }
+
+  &__photo-block {
+    position: relative;
+    z-index: 2;
+    top: 40px;
+    height: fit-content;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 8px;
+      background: $color-blue;
+    }
+  }
+
+  &__photo {
+    display: block;
+  }
+
+  &__info {
+    display: flex;
+    min-height: 520px;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 595px;
+    margin-left: 60px;
+    padding-top: 15px;
+
+
+  }
+
+  &__quote-box {
+    padding-left: 60px;
+  }
+
+  &__quote {
+    position: relative;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.84px;
+    max-width: 440px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../img/main/quote.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 35px;
+      height: 30px;
+    }
+
+    &::before {
+      top: -17px;
+      left: -60px;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      bottom: -20px;
+      right: 20px;
+    }
+  }
+
+  &__name {
+    position: relative;
+    display: block;
+    color: $color-dark-grey;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 6px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+      width: 75%;
+      height: 1px;
+      background: rgba(8, 26, 61, 0.24);
+      content: '';
+    }
+  }
+
+  &__position {
+    margin: 0;
+    max-width: 365px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 133%;
+    color: $color-dark-grey;
+  }
+
+  &__own {
+    margin-top: 40px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+    color: $color-dark-grey;
+    font-weight: 400;
+    line-height: 133%;
+
+  }
+
+  &__important {
+    font-size: 22px;
+    font-weight: 600;
+    color: $color-dark-grey;
+    position: relative;
+    display: block;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding-left: 12px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 4px;
+      height: 100%;
+      left: 0;
+      background-color: $color-blue;
+    }
+  }
+
+  @include tablet {
+    &__decor {
+      min-height: 560px;
+    }
+
+    &__info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__photo-block {
+      max-width: 500px;
+    }
+
+    &__photo {
+      width: 100%;
+    }
+
+    &__content {
+      max-width: 100%;
+      margin-left: 0;
+      padding-top: 140px;
+    }
+  }
+
+  @include mobile {
+    &__decor {
+      min-height: 275px;
+      width: 60%;
+    }
+
+    &__info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__photo-block {
+      max-width: 265px;
+      top: 10px;
+    }
+
+    &__content {
+      max-width: 100%;
+      margin-left: 0;
+      padding-top: 55px;
+    }
+
+    &__quote-box {
+      padding-left: 43px;
+    }
+
+    &__quote {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 122%;
+      letter-spacing: 0.18px;
+      max-width: 280px;
+
+      &::before,
+      &::after {
+        width: 28px;
+        height: 30px;
+      }
+
+      &::before {
+        left: -45px;
+        top: -20px;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+      margin-top: 45px;
+      margin-bottom: 0;
+    }
+
+    &__position {
+      font-size: 14px;
+    }
+
+    &__own{
+      margin-top: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 128%;
+    }
+
+    &__important {
+      font-size: 16px;
+      line-height: 140%;
+      margin: 20px 0;
+    }
+  }
+}

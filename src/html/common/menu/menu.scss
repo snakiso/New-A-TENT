@@ -53,7 +53,7 @@
       top: 48%;
       left: 31%;
       content: "";
-      background: #081a3d;
+      background: $color-text;
       width: 18px;
       height: 2px;
       transform: rotate(45deg);
@@ -70,13 +70,13 @@
 
   &__block {
     border-radius: 4px;
-    border: 1px solid #D7D7D7;
+    border: 1px solid $color-text;
     background: rgba(255, 255, 255, 0.80);
   }
 
   &__block-title {
     display: block;
-    color: #081A3D;
+    color: $color-text;
     font-family: 'Lato', sans-serif;
     font-size: 22px;
     font-weight: 700;

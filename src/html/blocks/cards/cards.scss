@@ -3,7 +3,7 @@
   &_video {
     .cards__item:hover {
       box-shadow: none;
-      border: 1px solid #D7D7D7;
+      border: 1px solid $color-light-grey;
 
       .cards__item-inner-container {
         padding: 14px;
@@ -30,7 +30,7 @@
 
       &:hover {
         box-shadow: none;
-        border: 1px solid #D7D7D7;
+         border: 1px solid $color-light-grey;;
 
         .cards__item-inner-container {
           padding: 14px;
@@ -81,7 +81,7 @@
   &__item {
     position: relative;
     display: block;
-    border: 1px solid #D7D7D7;
+    border: 1px solid $color-light-grey;
     transition: box-shadow .2s;
     margin-bottom: $offset-big;
     height: auto;
@@ -134,7 +134,7 @@
   &__title {
     font-family: 'Lato', sans-serif;
     display: block;
-    color: #081A3D;
+    color: $color-text;
     font-size: 22px;
     font-weight: 700;
     line-height: 1.27em;
@@ -156,9 +156,8 @@
   }
 
   &__text {
-    color: #3E4145;
+    color: $color-dark-grey;
     font-size: 18px;
-    font-family: Raleway;
     font-weight: 400;
     line-height: 1.33em;
     padding-bottom: 35px;
@@ -176,7 +175,7 @@
   &__link {
     position: absolute;
     bottom: 12px;
-    color: #081A3D;
+    color: $color-text;
     font-size: 16px;
     font-family: Raleway;
     font-weight: 600;
@@ -217,6 +216,7 @@
   }
 
   &__download {
+    position: relative;
     display: flex;
     z-index: 10;
     align-items: center;
@@ -237,8 +237,14 @@
     opacity: 0;
     transition: ease-in .2s;
 
-    img {
-      margin-left: 11px;
+    &::after{
+      position: relative;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/cards/card-download.svg);
+      margin-left: 12px;
+
     }
   }
 
@@ -253,10 +259,22 @@
     border: none;
     left: 50%;
     top: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
     z-index: 10;
     opacity: 0;
     transition: ease-in .2s;
+
+    &::after{
+      position: relative;
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url('../img/cards/card-play.svg');
+      background-repeat: no-repeat;
+      margin: 0 auto;
+    }
   }
 
   &__timecode {
@@ -269,7 +287,7 @@
     font-size: 18px;
     font-family: Lato;
     font-weight: 400;
-    background-color: #283755;
+    background-color: $color-dark-blue;
     padding: 2px 8px;
     border-radius: 4px;
     z-index: 9;

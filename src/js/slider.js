@@ -136,3 +136,30 @@ const swiper6 = new Swiper('.infinite-slider', {
     centeredSlides: true,
   }
 });
+
+
+var swiper7 = new Swiper(".certificates__slider", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  // },
+  // speed: 4000,
+  autoWidth: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1300: {
+      slidesPerView: 4,
+    },
+  }
+});

@@ -3,7 +3,7 @@
 
   &__item {
     max-width: 286px;
-    border: 1px solid #D7D7D7;
+    border: 1px solid $color-text;
     opacity: 0.6;
     transition: box-shadow ease-in .2s, opacity ease-in .2s;
     height: -webkit-fill-available;
@@ -32,7 +32,7 @@
   &__item-title {
     display: block;
     font-family: 'Lato', sans-serif;
-    color: #081A3D;
+    color: $color-text;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
@@ -40,7 +40,7 @@
   }
 
   &__item-text {
-    color: #3E4145;
+    color: $color-dark-grey;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -48,7 +48,7 @@
   }
 
   &__item-link {
-    color: #081A3D;
+    color: $color-text;
     font-size: 15px;
     font-weight: 500;
   }

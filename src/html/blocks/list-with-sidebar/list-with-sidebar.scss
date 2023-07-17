@@ -95,7 +95,7 @@
   }
 
   &__box-title {
-    color: #081A3D;
+    color: $color-text;
     font-family: 'Lato', sans-serif;
     font-size: 36px;
     display: block;
@@ -107,7 +107,7 @@
   }
 
   &__box-text {
-    color: #081A3D;
+    color: $color-text;
     font-size: 18px;
     font-weight: 400;
     line-height: 133%;
@@ -118,7 +118,7 @@
   }
 
   &__description {
-    color: #081A3D;
+    color: $color-text;
     font-size: 18px;
     font-weight: 400;
     line-height: 133%;

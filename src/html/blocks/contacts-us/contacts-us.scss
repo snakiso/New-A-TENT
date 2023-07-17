@@ -1,6 +1,6 @@
 .contacts-us {
   border-radius: 0px 48px 0px 0px;
-  border: 1px solid #D7D7D7;
+  border: 1px solid $color-light-grey;
   background: rgba(255, 255, 255, 0.48);
   max-width: 435px;
   height: fit-content;
@@ -13,14 +13,14 @@
   &__title {
     position: relative;
     display: block;
-    color: #283755;
+    color: $color-dark-blue;
     font-size: 18px;
     font-weight: 600;
 
     &::after {
       position: absolute;
       content: '';
-      width: calc(100% - 30px);
+      width: 95%;
       bottom: -20px;
       left: 0;
       background-color: rgba(40, 55, 85, 0.60);
@@ -30,7 +30,7 @@
   }
 
   &__text {
-    color: #283755;
+    color: $color-dark-blue;
     font-size: 16px;
     font-weight: 400;
     margin: 40px 0 0 0;
@@ -79,7 +79,7 @@
       font-size: 14px;
 
       &::after {
-        width: calc(100% - 15px);
+        width: 95%;
         bottom: -12px;
       }
     }

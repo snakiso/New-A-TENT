@@ -149,7 +149,7 @@
     &__box {
       display: flex;
       flex-direction: column;
-      border: 1px solid #D7D7D7;
+      border: 1px solid $color-light-grey;
       margin-bottom: 20px;
       &_reverse {
         .additional__content {

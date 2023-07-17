@@ -1,4 +1,4 @@
-.clients {
+.certificates {
 
   &__title {
     max-width: 1200px;
@@ -15,12 +15,9 @@
 
   &__item {
     width: 25%;
-    display: flex;
-    align-items: stretch;
-    justify-content: stretch;
 
     &:hover {
-      .clients__item-wrapper {
+      .certificates__item-wrapper {
         border: 1px solid transparent;
         box-shadow: 4px 4px 25px 0px rgba(40, 55, 85, 0.12);
       }
@@ -28,23 +25,11 @@
   }
 
   &__item-wrapper {
-    border: 1px solid $color-text;
     width: 100%;
-    padding-bottom: 75%;
     position: relative;
     transition: box-shadow ease-in 0.2s;
   }
 
-  &__item-inner {
-    width: 85%;
-    height: 85%;
-    position: relative;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-  }
 
   &__img {
     max-width: 100%;
@@ -83,11 +68,6 @@
 
     &__item-wrapper {
       padding-bottom: 50%;
-    }
-
-    &__item-inner {
-      width: 65%;
-      height: 65%;
     }
   }
 }

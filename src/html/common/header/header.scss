@@ -57,7 +57,7 @@
   }
 
   &__link {
-    color: #081A3D;
+    color: $color-text;
     font-size: 16px;
     font-weight: 500;
 
@@ -73,7 +73,7 @@
 
   &__burger-box {
     cursor: pointer;
-    background-color: #081A3D;
+    background-color: $color-text;
     width: 50px;
     height: 44px;
     border-radius: 40px;

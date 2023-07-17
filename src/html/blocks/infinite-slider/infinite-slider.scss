@@ -47,15 +47,14 @@
   }
 
   &__next {
-    left: 18%;
-  }
-
-  &__prev {
     right: 18%;
-
     &::after {
       transform: translate(-50%, -50%) rotate(180deg);
     }
+  }
+
+  &__prev {
+    left: 18%;
   }
 
   @include tablet {

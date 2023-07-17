@@ -44,7 +44,7 @@
     margin-bottom: 20px;
 
     &:hover {
-      color: #20C2FF
+      color: $color-blue
     }
 
     @media screen and (max-width: 1000px) {
@@ -71,7 +71,7 @@
     background-color: #fff;
     border: none;
     display: inline-block;
-    color: #081A3D;
+    color: $color-text;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -80,7 +80,7 @@
     max-height: 40px;
 
     &:hover {
-      color: #20C2FF
+      color: $color-blue
     }
   }
 
@@ -90,7 +90,8 @@
   }
 
   @media screen and (max-width: 1000px) {
-    max-width: calc(100% - 30px);
+    max-width: 100%;
+    margin-left: 15px;
     min-height: 250px;
     right: 10px;
     border-radius: 0 30px 0 0;
@@ -109,7 +110,7 @@
   height: 4px;
   top: 0;
   width: 95%;
-  background: linear-gradient(89.96deg, #20C2FF 52.94%, rgba(32, 194, 255, 0) 96.46%);
+  background: linear-gradient(89.96deg, $color-blue 52.94%, rgba(32, 194, 255, 0) 96.46%);
 
   @media screen and (max-width: 1000px) {
     height: 2px;
@@ -120,7 +121,7 @@
   width: 4px;
   height: 100%;
   left: 0;
-  background: linear-gradient(179.99deg, #20C2FF 7.97%, rgba(32, 194, 255, 0) 117.55%);
+  background: linear-gradient(179.99deg, $color-blue 7.97%, rgba(32, 194, 255, 0) 117.55%);
 
   @media screen and (max-width: 1000px) {
     width: 2px;
