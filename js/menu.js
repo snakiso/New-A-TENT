@@ -1,65 +1,54 @@
-let burger = document.querySelector('.header__burger-box');
-let close = document.querySelector('.menu__close');
-let menu = document.querySelector('.menu');
-let html = document.querySelector('.html');
+// let burger = document.querySelector('.header__burger-box');
+// let close = document.querySelector('.menu__close');
+// let menu = document.querySelector('.menu');
+// let html = document.querySelector('.html');
 
-function Scroll() {
-  if (menu.classList.contains('open')) {
-    html.style.overflow = 'hidden'
-  } else {
-    html.style.overflow = 'auto'
+// function Scroll() {
+//   if (menu.classList.contains('open')) {
+//     html.style.overflow = 'hidden'
+//   } else {
+//     html.style.overflow = 'auto'
+//   }
+// }
+
+// burger.addEventListener('click', () => {
+//   menu.classList.add('open')
+//   Scroll()
+//   menu.style.top = '0%'
+// })
+
+// close.addEventListener('click', () => {
+//   menu.classList.remove('open')
+//   Scroll()
+//   menu.style.top = '-200%'
+// })
+
+let menuItem = document.querySelectorAll('.menu__block-title_with-arrow');
+let menuBlock = document.querySelectorAll('.menu__block_open');
+
+
+function closeItem() {
+  for (let i = 0; i < menuItem.length; i++) {
+      menuBlock[i].classList.remove('active')
   }
 }
 
-burger.addEventListener('click', () => {
-  menu.classList.add('open')
-  Scroll()
-  menu.style.top = '0%'
-})
-
-close.addEventListener('click', () => {
-  menu.classList.remove('open')
-  Scroll()
-  menu.style.top = '-200%'
-})
-
-let mobileBtn = document.querySelectorAll('.mobile-btn');
-let mobileArr = document.querySelectorAll('.mobile-arr');
-
-for (let i = 0; i < mobileBtn.length; i++) {
-  mobileBtn[i].addEventListener('click', (e) => {
-    if (e.target.classList.contains('active')) {
-      mobileArr[i].classList.toggle('active');
-      checkClass()
-    } else {
-      removeClass()
-      mobileArr[i].classList.toggle('active');
-      checkClass()
-    }
-  })
-}
-
-function removeClass(target) {
-  for (let i = 0; i < mobileBtn.length; i++) {
-    mobileArr[i].classList.remove('active');
-  }
-}
-
-function checkClass() {
-  for (let i = 0; i < mobileBtn.length; i++) {
-    if (mobileArr[i].classList.contains('active')) {
-      mobileBtn[i].style.maxHeight = '370px'
-    } else {
-      mobileBtn[i].style.maxHeight = '50px'
+function TouchItem() {
+  var screenWidth = window.innerWidth;
+  if (screenWidth < 1200) {
+    for (let i = 0; i < menuItem.length; i++) {
+      menuItem[i].addEventListener('click', () => {
+        closeItem()
+        menuBlock[i].classList.toggle('active');
+      })
     }
   }
 }
 
-//COOKIES
+$(document).ready(function () {
+  TouchItem();
+}); //Проверка при загрузке страницы
 
-let cookies = document.querySelector('.cookies');
-let cookiesBtn = document.querySelector('.cookies__accept');
-
-cookiesBtn.addEventListener('click', () => {
-  cookies.classList.add('cookies_accepted');
-})
+$(window).on('resize', function () {
+  TouchItem()
+}); //Запуск функции при изменении размера
