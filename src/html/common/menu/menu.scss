@@ -1,12 +1,12 @@
 .menu {
   position: fixed;
-  min-height: 800px;
-  max-height: 1500px;
+  overflow-y: scroll;
+  max-height: 850px;
   width: 100%;
   background-color: rgba(246, 246, 246, 1);
   background-image: url(../img/header/menu-bg.png);
   z-index: 100;
-  top: 0%;
+  top: -200%;
   transition: all .5s;
 
   &__wrapper {

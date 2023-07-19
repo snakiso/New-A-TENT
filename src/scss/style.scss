@@ -17,7 +17,7 @@ a {
 
 .main {
   position: relative;
-  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .main-bg {
@@ -67,6 +67,8 @@ a {
 @import '../scss/swiper-pagintaion';
 @import '../html/blocks/title/title';
 @import '../scss/offsets';
+@import '../scss/input.scss';
+@import '../scss/checkbox.scss';
 @import '../html/blocks/cards/cards';
 @import '../html/blocks/cards/cards-slider';
 @import '../html/blocks/button/button';
@@ -96,3 +98,5 @@ a {
 @import '../html/blocks/list-with-sidebar/list-with-sidebar';
 @import '../html/why-page/review/review';
 @import '../html/why-page/certificates/certificates';
+@import '../html/contacts-page/contacts-page';
+@import '../html/contacts-page/form/form';

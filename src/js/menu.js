@@ -1,27 +1,27 @@
-// let burger = document.querySelector('.header__burger-box');
-// let close = document.querySelector('.menu__close');
-// let menu = document.querySelector('.menu');
-// let html = document.querySelector('.html');
+let burger = document.querySelector('.header__burger-box');
+let close = document.querySelector('.menu__close');
+let menu = document.querySelector('.menu');
+let html = document.querySelector('.html');
 
-// function Scroll() {
-//   if (menu.classList.contains('open')) {
-//     html.style.overflow = 'hidden'
-//   } else {
-//     html.style.overflow = 'auto'
-//   }
-// }
+function Scroll() {
+  if (menu.classList.contains('open')) {
+    html.style.overflow = 'hidden'
+  } else {
+    html.style.overflow = 'auto'
+  }
+}
 
-// burger.addEventListener('click', () => {
-//   menu.classList.add('open')
-//   Scroll()
-//   menu.style.top = '0%'
-// })
+burger.addEventListener('click', () => {
+  menu.classList.add('open')
+  Scroll()
+  menu.style.top = '0%'
+})
 
-// close.addEventListener('click', () => {
-//   menu.classList.remove('open')
-//   Scroll()
-//   menu.style.top = '-200%'
-// })
+close.addEventListener('click', () => {
+  menu.classList.remove('open')
+  Scroll()
+  menu.style.top = '-200%'
+})
 
 let menuItem = document.querySelectorAll('.menu__block-title_with-arrow');
 let menuBlock = document.querySelectorAll('.menu__block_open');

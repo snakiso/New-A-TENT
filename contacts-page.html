@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap&_v=20230719171520" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap&_v=20230719171520" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap&_v=20230719171520" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap&_v=20230719171520" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap&_v=20230719171520" rel="stylesheet">
+  <link rel="shortcut icon" href="img/main/favicon-32x32.png" type="image/x-icon">
+  <link rel="preload" as="image" href="./img/main/hero.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230719171520" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230719171520"></script>
+  <script src="js/jQuery2.2.0.js?_v=20230719171520"></script>
+  <script src="js/ScrollAnimations.js?_v=20230719171520"></script>
+  <link rel="stylesheet" href="css/style.min.css?_v=20230719171520">
+  <title>Главная</title>
+</head>
+
+<body class="body">
+  <main class="main">
+    <section class="contacts-page">
+        <div class="wrapper grid">
+            <div class="contacts-page__top">
+    <div class=" title">
+        <h2 class="contacts-page__title title__title">Контакты</h2>
+    </div>
+    <div class="contacts-page__container">
+        <div class="contacts-page__inner-box">
+            <span class="contacts-page__inner-box-title">Адрес</span>
+            <a href="#" class="contacts-page__inner-box-link">127549, г. Москва, ул. Бибиревская 4</a>
+        </div>
+        <div class="contacts-page__inner-box">
+            <span class="contacts-page__inner-box-title">E-mail</span>
+            <a href="mailto:tent@tent.ru" class="contacts-page__inner-box-link">tent@tent.ru</a>
+        </div>
+        <div class="contacts-page__inner-box">
+            <span class="contacts-page__inner-box-title">Телефон</span>
+            <a href="tel:+74955029900" class="contacts-page__inner-box-link">+7 (495) 502-99-00</a>
+        </div>
+    </div>
+</div>
+ 
+            <form action="POST" class="form">
+    <span class="form__title">Связаться с нами</span>
+    <div class="form__block">
+        <span class="form__input-title">Организация<span class="form__input-title-star">*</span></span>
+        <input class="input" type="text" name="organization" placeholder="Название организации" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">ФИО<span class="form__input-title-star">*</span></span>
+        <input class="input" type="text" name="name" placeholder="Фамилия Имя Отчество" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">Телефон<span class="form__input-title-star">*</span></span>
+        <input class="input" type="tel" name="tel" placeholder="+7" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">E-mail<span class="form__input-title-star">*</span></span>
+        <input class="input" type="email" name="mail" placeholder="E-mail" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">Сообщение</span>
+        <textarea class="input" name="message" cols="30" rows="10" placeholder="Напишите нам"></textarea>
+    </div>
+    <div class="form__accept">
+       <input class="checkbox" type="checkbox" name="">
+       <span class="custom-checkbox"></span>
+       <p class="form__accept-text">Согласен на обработку <a href="#" class="form__accept-link">персональных данных</a></p>
+    </div>
+    <div class="form__submit-block">
+        <div class="g-recaptcha" data-sitekey="КЛЮЧ_САЙТА"></div>
+        <button class="button" type="submit">Отправить</button>
+    </div>
+</form>
+        </div>
+    </section>
+  </main>
+</body>
+<script async src="https://www.google.com/recaptcha/api.js?_v=20230719171520"></script>
+</html>

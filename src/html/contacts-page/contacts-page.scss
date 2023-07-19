@@ -1,0 +1,47 @@
+.contacts-page {
+    &__title {
+        font-size: 50px;
+    }
+
+    &__top {
+        grid-column: 7 span;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+
+    &__inner-box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:not(:last-child)::after{
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 1px;
+            right: -38px;
+            background-color: rgba(62, 65, 69, 0.50);
+        }
+    }
+
+    &__inner-box-title {
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 118%;
+        color: $color-text;
+    }
+
+    &__inner-box-link {
+        display: block;
+        font-size: 18px;
+        color: $color-text;
+        font-weight: 400;
+        line-height: 133%;
+        margin-top: 10px;
+    }
+}

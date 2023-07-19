@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+@@include('html/common/head/head-2.html',{
+"title": "Главная"
+})
+
+<body class="body">
+  <main class="main">
+    <section class="contacts-page">
+        <div class="wrapper grid">
+            @@include('html/contacts-page/contacts-page-top.html',{}) 
+            @@include('html/contacts-page/form/form.html',{})
+        </div>
+    </section>
+  </main>
+</body>
+<script async src="https://www.google.com/recaptcha/api.js"></script>
+</html>

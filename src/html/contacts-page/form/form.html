@@ -1,0 +1,32 @@
+<form action="POST" class="form">
+    <span class="form__title">Связаться с нами</span>
+    <div class="form__block">
+        <span class="form__input-title">Организация<span class="form__input-title-star">*</span></span>
+        <input class="input" type="text" name="organization" placeholder="Название организации" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">ФИО<span class="form__input-title-star">*</span></span>
+        <input class="input" type="text" name="name" placeholder="Фамилия Имя Отчество" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">Телефон<span class="form__input-title-star">*</span></span>
+        <input class="input" type="tel" name="tel" placeholder="+7" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">E-mail<span class="form__input-title-star">*</span></span>
+        <input class="input" type="email" name="mail" placeholder="E-mail" required>
+    </div>
+    <div class="form__block">
+        <span class="form__input-title">Сообщение</span>
+        <textarea class="input" name="message" cols="30" rows="10" placeholder="Напишите нам"></textarea>
+    </div>
+    <div class="form__accept">
+       <input class="checkbox" type="checkbox" name="">
+       <span class="custom-checkbox"></span>
+       <p class="form__accept-text">Согласен на обработку <a href="#" class="form__accept-link">персональных данных</a></p>
+    </div>
+    <div class="form__submit-block">
+        <div class="g-recaptcha" data-sitekey="КЛЮЧ_САЙТА"></div>
+        <button class="button" type="submit">Отправить</button>
+    </div>
+</form>
