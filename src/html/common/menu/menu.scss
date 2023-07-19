@@ -7,6 +7,7 @@
   background-image: url(../img/header/menu-bg.png);
   z-index: 100;
   top: -200%;
+  bottom: 0;
   transition: all .5s;
 
   &__wrapper {
