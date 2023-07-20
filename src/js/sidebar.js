@@ -1,11 +1,15 @@
 let sidebarContainer = document.querySelector('.list-with-sidebar__sidebar-inner-container'); //Контейнер сайдбара
 let sidebar = document.querySelector('.list-with-sidebar__sidebar'); //сайдбар
-let sidebarHeight = sidebar.offsetHeight; //высота сайдбара
-let sidebarContainerHeight = sidebarContainer.offsetHeight; //высота контейнера 
-let neededDistance = sidebarHeight - sidebarContainerHeight; //Расстояние, которое надо пройти, чтобы контейнер остановился
+
 
 
 window.addEventListener('scroll', () => {
+  let sidebarHeight = sidebar.offsetHeight; //высота сайдбара
+  let sidebarContainerHeight = sidebarContainer.offsetHeight; //высота контейнера 
+  let neededDistance = sidebarHeight - sidebarContainerHeight; //Расстояние, которое надо пройти, чтобы контейнер остановился
+ 
+  console.log(neededDistance)
+
   let distanceForTop = sidebar.getBoundingClientRect().top
   if (distanceForTop <= 0 && distanceForTop >= -neededDistance) {
     sidebarContainer.style.position = 'fixed';
@@ -55,7 +59,7 @@ function init() {
       let boxText = boxTexts[i];
       let box = boxes[i];
       let boxSummaryHeight = `${boxTop.offsetHeight + boxText.offsetHeight}px`;
-      
+
       box.classList.add('list-with-sidebar__box_unactive');
 
       if (box.classList.contains('list-with-sidebar__box_unactive')) {

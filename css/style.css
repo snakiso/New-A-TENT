@@ -3001,6 +3001,7 @@ img.mfp-img {
 .list-with-sidebar__sidebar-inner-container {
   padding: 60px 80px 60px 60px;
   top: 0px;
+  transition: all 0.2s;
 }
 
 .list-with-sidebar__sidebar-list {
