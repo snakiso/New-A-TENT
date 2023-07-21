@@ -40,9 +40,9 @@ window.addEventListener('scroll', () => {
     let boxHeight = box.offsetHeight; //Высота коробки
 
 
-    if (boxDistanceForTop <= 0 && boxDistanceForTop >= -boxHeight) {
+    if (boxDistanceForTop <= 100 && boxDistanceForTop >= -boxHeight) {
       sidebarItem.classList.add('list-with-sidebar__sidebar-item_active');
-    } else if (boxDistanceForTop <= -boxHeight || boxDistanceForTop >= 0) {
+    } else if (boxDistanceForTop <= -boxHeight || boxDistanceForTop >= 100) {
       sidebarItem.classList.remove('list-with-sidebar__sidebar-item_active');
     }
   }
