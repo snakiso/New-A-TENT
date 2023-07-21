@@ -3469,7 +3469,7 @@ img.mfp-img {
 
 .error-page__title {
   font-size: 200px;
-  font-family: "Play", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   letter-spacing: 0.005em;
   line-height: 110%;
@@ -3519,6 +3519,58 @@ img.mfp-img {
 
 .error-page__link:hover::after {
   opacity: 1;
+}
+
+.pagination {
+  max-width: 440px;
+  display: flex;
+  justify-content: space-between;
+  height: 57px;
+  align-items: center;
+}
+
+.pagination__prev,
+.pagination__next {
+  height: 57px;
+  width: 57px;
+  position: relative;
+}
+
+.pagination__prev::after,
+.pagination__next::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/slider/slider-arrow.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 58px;
+  height: 58px;
+}
+
+.pagination__prev {
+  transform: rotate(180deg);
+}
+
+.pagination__prev.unactive,
+.pagination__next.unactive {
+  opacity: 0.5;
+}
+
+.pagination__link {
+  font-family: "Lato", sans-serif;
+  color: #9C9C9C;
+}
+
+.pagination__link_active {
+  color: #20C2FF;
+}
+
+.pagination__dotes {
+  font-family: "Lato", sans-serif;
+  color: #9C9C9C;
 }
 
 @media (max-width: 1920px) {
@@ -4193,13 +4245,15 @@ img.mfp-img {
   }
 
   .error-page__text {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
+    margin-top: 12px;
   }
 
   .error-page__link {
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 25px;
+    padding: 11px 21px;
   }
 
   .error-page__link::after {
