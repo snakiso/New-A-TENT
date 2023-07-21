@@ -1,48 +1,63 @@
-let sidebar = document.querySelector('.list-with-sidebar__sidebar'); //сайдбар
-let sidebarContainer = sidebar.querySelector('.list-with-sidebar__sidebar-inner-container'); //Контейнер сайдбара
+let sidebar = document.querySelectorAll('.list-with-sidebar__sidebar'); //сайдбар
+let sidebarContainer = document.querySelectorAll('.list-with-sidebar__sidebar-inner-container'); //Контейнер сайдбара
+let header = document.querySelector('.header')
+let headerStyles = window.getComputedStyle(header);
+let headerHeight = 0; //Высота хедера
 
-if (sidebar) {
-  window.addEventListener('scroll', () => {
-    let headerHeight = document.querySelector('.header').offsetHeight; //Высота хедера
-    let sidebarHeight = sidebar.offsetHeight; //высота сайдбара
-    let sidebarContainerHeight = sidebarContainer.offsetHeight; //высота контейнера 
-    let neededDistance = (sidebarHeight - sidebarContainerHeight - headerHeight); //Расстояние, которое надо пройти, чтобы контейнер остановился
-
-    //Если хедер статичен, то меняем значение headerHeight на 0!!!!
-
-    let distanceForTop = sidebar.getBoundingClientRect().top
-    if (distanceForTop <= headerHeight && distanceForTop >= -neededDistance) {
-      sidebarContainer.style.position = 'fixed';
-      sidebarContainer.style.top = `${headerHeight}px`;
-      sidebarContainer.style.bottom = 'auto'
-    } else if (distanceForTop <= -neededDistance) {
-      sidebarContainer.style.position = 'absolute';
-      sidebarContainer.style.bottom = '0'
-      sidebarContainer.style.top = 'auto'
-    } else {
-      sidebarContainer.style.position = 'absolute';
-      sidebarContainer.style.bottom = 'auto'
-      sidebarContainer.style.top = '0'
-    }
-  })
+if (headerStyles.position == 'fixed') {
+  headerHeight = header.offsetHeight
+} else {
+  headerHeight = 0
 }
+
+
+for (let j = 0; j <= sidebar.length; j++) {
+
+  if (sidebarContainer[j]) {
+    window.addEventListener('scroll', () => {
+      let sidebarHeight = sidebar[j].offsetHeight; //высота сайдбара
+      let sidebarContainerHeight = sidebarContainer[j].offsetHeight; //высота контейнера 
+      let neededDistance = (sidebarHeight - sidebarContainerHeight - headerHeight); //Расстояние, которое надо пройти, чтобы контейнер остановился
+
+      //Если хедер статичен, то меняем значение headerHeight на 0!!!!
+
+      let distanceForTop = sidebar[j].getBoundingClientRect().top
+      if (distanceForTop <= headerHeight && distanceForTop >= -neededDistance) {
+        sidebarContainer[j].style.position = 'fixed';
+        sidebarContainer[j].style.top = `${headerHeight}px`;
+        sidebarContainer[j].style.bottom = 'auto'
+      } else if (distanceForTop <= -neededDistance) {
+        sidebarContainer[j].style.position = 'absolute';
+        sidebarContainer[j].style.bottom = '0'
+        sidebarContainer[j].style.top = 'auto'
+      } else {
+        sidebarContainer[j].style.position = 'absolute';
+        sidebarContainer[j].style.bottom = 'auto'
+        sidebarContainer[j].style.top = '0'
+      }
+    })
+  }
+}
+
 
 
 let boxes = document.querySelectorAll('.list-with-sidebar__box'); // Основные элементы списка 
 let sidebarItems = document.querySelectorAll('.list-with-sidebar__sidebar-item'); //Элементы сайдбара
+let boxStyles = window.getComputedStyle(boxes[0]);
+let boxesMarginBottom = +boxStyles.marginBottom.slice(0, boxStyles.marginBottom.length - 2);
 
 
 window.addEventListener('scroll', () => {
   for (let i = 0; i < boxes.length; i++) {
     let box = boxes[i]; //один контейнер
     let sidebarItem = sidebarItems[i]; // Один элемент списка 
-    let boxDistanceForTop = box.getBoundingClientRect().top - 90; //Расстояние до верха при котором должны загораться элементы списка
+    let boxDistanceForTop = box.getBoundingClientRect().top - boxesMarginBottom; //Расстояние до верха при котором должны загораться элементы списка
     let boxHeight = box.offsetHeight; //Высота коробки
 
 
-    if (boxDistanceForTop <= 100 && boxDistanceForTop >= -boxHeight) {
+    if (boxDistanceForTop <= headerHeight && boxDistanceForTop >= -boxHeight) {
       sidebarItem.classList.add('list-with-sidebar__sidebar-item_active');
-    } else if (boxDistanceForTop <= -boxHeight || boxDistanceForTop >= 100) {
+    } else if (boxDistanceForTop <= -boxHeight || boxDistanceForTop >= headerHeight) {
       sidebarItem.classList.remove('list-with-sidebar__sidebar-item_active');
     }
   }
@@ -95,7 +110,13 @@ $(window).on('resize', function () {
 
 
 
-sidebarItems.forEach(link => {
+
+for(let b = 0; b<sidebarItems.length; b++){
+  let link = sidebarItems[b];
+  let id = `lws-${b+1}`;
+  link.href = `#${id}`;
+  let box = boxes[b];
+  box.id = id;
 
   link.addEventListener('click', function (e) {
     e.preventDefault();
@@ -104,15 +125,10 @@ sidebarItems.forEach(link => {
     const scrollTarget = document.getElementById(href);
 
     const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - 100;
+    const offsetPosition = elementPosition - headerHeight;
     window.scrollBy({
       top: offsetPosition,
       behavior: 'smooth'
     });
-  }
-
-
-
-  )
-
-})
+  })
+}
