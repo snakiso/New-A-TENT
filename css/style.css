@@ -846,6 +846,36 @@ img.mfp-img {
   padding: 14px 15px;
 }
 
+.cards__item-decor {
+  background-color: #20C2FF;
+  margin-bottom: 60px;
+  grid-column: 4 span;
+  background-image: url(../img/cards/decor-card.png);
+}
+
+.cards__item-decor-inner {
+  padding: 44px;
+}
+
+.cards__item-decor-text {
+  display: block;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 111%;
+}
+
+.cards__item-decor-big-text {
+  display: block;
+  color: #FFF;
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1.28px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
 .cards__img {
   width: 101%;
   max-height: 420px;
@@ -3573,6 +3603,62 @@ img.mfp-img {
   color: #9C9C9C;
 }
 
+.share {
+  display: flex;
+  align-items: center;
+}
+
+.share__text {
+  display: block;
+  color: #140B35;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-right: 20px;
+}
+
+.share__chain {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/share/chain-share.svg);
+  margin-left: 12px;
+}
+
+.ya-share2__container_mobile.ya-share2__container_size_m .ya-share2__icon {
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item {
+  margin: 2px 12px 0 0 !important;
+}
+
+.ya-share2__item_service_telegram .ya-share2__badge,
+.ya-share2__item_service_telegram .ya-share2__mobile-popup-badge,
+.ya-share2__item_service_whatsapp .ya-share2__badge,
+.ya-share2__item_service_whatsapp .ya-share2__mobile-popup-badge,
+.ya-share2__item_service_vkontakte .ya-share2__badge,
+.ya-share2__item_service_vkontakte .ya-share2__mobile-popup-badge {
+  background-color: transparent !important;
+}
+
+.ya-share2__container_mobile .ya-share2__icon {
+  background-size: cover !important;
+}
+
+.ya-share2__item_service_telegram .ya-share2__icon {
+  background-image: url(../img/share/telegram-share.svg) !important;
+}
+
+.ya-share2__item_service_whatsapp .ya-share2__icon {
+  background-image: url(../img/share/whatsapp-share.svg) !important;
+}
+
+.ya-share2__item_service_vkontakte .ya-share2__icon {
+  background-image: url(../img/share/vk-share.svg) !important;
+}
+
 @media (max-width: 1920px) {
   .director__decor {
     width: 35%;
@@ -3655,6 +3741,10 @@ img.mfp-img {
 
   .title__title {
     font-size: 30px;
+  }
+
+  .cards__item-decor {
+    display: none;
   }
 
   .cards__title {

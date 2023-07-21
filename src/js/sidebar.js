@@ -92,3 +92,27 @@ $(document).ready(function () {
 $(window).on('resize', function () {
   init();
 }); //Запуск функции при изменении размера
+
+
+
+sidebarItems.forEach(link => {
+
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let href = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
+
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - 100;
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+
+
+
+  )
+
+})

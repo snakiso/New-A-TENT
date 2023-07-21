@@ -30,7 +30,8 @@
 
       &:hover {
         box-shadow: none;
-         border: 1px solid $color-light-grey;;
+        border: 1px solid $color-light-grey;
+        ;
 
         .cards__item-inner-container {
           padding: 14px;
@@ -101,6 +102,36 @@
         padding: 14px 15px;
       }
     }
+  }
+
+  &__item-decor {
+    background-color: $color-blue;
+    margin-bottom: 60px;
+    grid-column: 4 span;
+    background-image: url(../img/cards/decor-card.png);
+  }
+
+  &__item-decor-inner {
+    padding: 44px;
+  }
+
+  &__item-decor-text {
+    display: block;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 111%;
+  }
+
+  &__item-decor-big-text {
+    display: block;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1.28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
   }
 
   &__img {
@@ -237,7 +268,7 @@
     opacity: 0;
     transition: ease-in .2s;
 
-    &::after{
+    &::after {
       position: relative;
       content: '';
       width: 20px;
@@ -265,7 +296,7 @@
     opacity: 0;
     transition: ease-in .2s;
 
-    &::after{
+    &::after {
       position: relative;
       content: '';
       display: block;
@@ -294,6 +325,10 @@
   }
 
   @include tablet {
+    &__item-decor {
+      display: none;
+    }
+
     &__title {
       font-size: 18px;
     }
