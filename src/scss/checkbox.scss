@@ -25,13 +25,15 @@
         top: -1px;
         opacity: 0;
     }
+
+    
 }
 
 .checkbox:checked+.custom-checkbox {
     border: none;
     background-color: $color-blue;
 
-    &::after{
+    &::after {
         opacity: 1;
     }
 }

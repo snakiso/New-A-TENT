@@ -1,0 +1,13 @@
+#map {
+    width: 40%;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include mobile {
+        position: relative;
+        width: 100%;
+        min-height: 360px;
+    }
+}
