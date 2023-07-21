@@ -11,42 +11,56 @@
         margin-right: 20px;
     }
 
-    &__chain{
+    &__chain {
         display: block;
         width: 35px;
         height: 35px;
-        background-image:  url(../img/share/chain-share.svg);
+        background-image: url(../img/share/chain-share.svg);
         margin-left: 12px;
     }
 }
 
-.ya-share2__container_mobile.ya-share2__container_size_m .ya-share2__icon{
+.ya-share2__container_mobile.ya-share2__container_size_m .ya-share2__icon {
     width: 35px !important;
     height: 35px !important;
 }
 
-.ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item{
+.ya-share2__list.ya-share2__list_direction_horizontal>.ya-share2__item {
     margin: 2px 12px 0 0 !important;
 }
 
-.ya-share2__item_service_telegram .ya-share2__badge, .ya-share2__item_service_telegram .ya-share2__mobile-popup-badge,
-.ya-share2__item_service_whatsapp .ya-share2__badge, .ya-share2__item_service_whatsapp .ya-share2__mobile-popup-badge,
-.ya-share2__item_service_vkontakte .ya-share2__badge, .ya-share2__item_service_vkontakte .ya-share2__mobile-popup-badge{
+.ya-share2__item_service_telegram .ya-share2__badge,
+.ya-share2__item_service_telegram .ya-share2__mobile-popup-badge,
+.ya-share2__item_service_whatsapp .ya-share2__badge,
+.ya-share2__item_service_whatsapp .ya-share2__mobile-popup-badge,
+.ya-share2__item_service_vkontakte .ya-share2__badge,
+.ya-share2__item_service_vkontakte .ya-share2__mobile-popup-badge {
     background-color: transparent !important;
 }
 
-.ya-share2__container_mobile .ya-share2__icon{
+.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
     background-size: cover !important;
 }
 
-.ya-share2__item_service_telegram .ya-share2__icon{
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+    background-size: cover !important;
+    height: 35px !important;
+    width: 35px !important;
+}
+
+
+.ya-share2__container_mobile .ya-share2__icon {
+    background-size: cover !important;
+}
+
+.ya-share2__item_service_telegram .ya-share2__icon {
     background-image: url(../img/share/telegram-share.svg) !important;
 }
 
-.ya-share2__item_service_whatsapp .ya-share2__icon{
+.ya-share2__item_service_whatsapp .ya-share2__icon {
     background-image: url(../img/share/whatsapp-share.svg) !important;
 }
 
-.ya-share2__item_service_vkontakte .ya-share2__icon{
+.ya-share2__item_service_vkontakte .ya-share2__icon {
     background-image: url(../img/share/vk-share.svg) !important;
 }

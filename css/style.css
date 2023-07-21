@@ -3643,6 +3643,16 @@ img.mfp-img {
   background-color: transparent !important;
 }
 
+.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+  background-size: cover !important;
+}
+
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+  background-size: cover !important;
+  height: 35px !important;
+  width: 35px !important;
+}
+
 .ya-share2__container_mobile .ya-share2__icon {
   background-size: cover !important;
 }
