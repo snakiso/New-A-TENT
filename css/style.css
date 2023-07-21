@@ -1374,6 +1374,7 @@ img.mfp-img {
   width: 100%;
   position: absolute;
   z-index: 3;
+  background-color: transparent;
 }
 
 .header_opacity-bg .header__link {
@@ -1947,7 +1948,7 @@ img.mfp-img {
 
 .solution-slider__item {
   max-width: 286px;
-  border: 1px solid #081A3D;
+  border: 1px solid #D7D7D7;
   opacity: 0.6;
   transition: box-shadow ease-in 0.2s, opacity ease-in 0.2s;
   height: -webkit-fill-available;
@@ -2622,7 +2623,7 @@ img.mfp-img {
 }
 
 .clients__item-wrapper {
-  border: 1px solid #081A3D;
+  border: 1px solid #D7D7D7;
   width: 100%;
   padding-bottom: 75%;
   position: relative;

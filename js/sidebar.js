@@ -52,36 +52,6 @@ window.addEventListener('scroll', () => {
 let boxTops = document.querySelectorAll('.list-with-sidebar__box-top'); // Заголовок контейтера с номерм 
 let boxTexts = document.querySelectorAll('.list-with-sidebar__box-text');
 
-function init() {
-  var screenWidth = window.innerWidth;
-  if (screenWidth < 768) {
-    for (let i = 0; i < boxTops.length; i++) {
-
-      let boxTop = boxTops[i];
-      let boxText = boxTexts[i];
-      let box = boxes[i];
-      let boxSummaryHeight = `${boxTop.offsetHeight + boxText.offsetHeight}px`;
-
-      box.classList.add('list-with-sidebar__box_unactive');
-
-      if (box.classList.contains('list-with-sidebar__box_unactive')) {
-        box.style.maxHeight = `${boxTop.offsetHeight}px`
-      }
-
-      boxTop.addEventListener('click', () => {
-        box.classList.toggle('list-with-sidebar__box_unactive')
-        if (box.classList.contains('list-with-sidebar__box_unactive')) {
-          box.style.maxHeight = `${boxTop.offsetHeight}px`
-        } else {
-          box.style.maxHeight = boxSummaryHeight;
-        }
-
-      })
-    }
-  } else {
-    box.style.maxHeight = boxSummaryHeight
-  }
-}
 
 
 function init() {
@@ -90,7 +60,7 @@ function init() {
     let boxTop = boxTops[i];
     let boxText = boxTexts[i];
     let box = boxes[i];
-    let boxSummaryHeight = `${boxTop.offsetHeight + boxText.offsetHeight}px`;
+    let boxSummaryHeight = `${boxTop.offsetHeight + boxText.offsetHeight + 20}px`;
 
     if (screenWidth < 768) {
       box.classList.add('list-with-sidebar__box_unactive');
