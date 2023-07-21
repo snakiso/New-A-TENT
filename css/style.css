@@ -3303,6 +3303,21 @@ img.mfp-img {
      object-fit: contain;
 }
 
+.contacts-page {
+  position: relative;
+  background-image: url(../img/contact/contact-page-bg.png);
+  background-repeat: no-repeat;
+}
+
+.contacts-page__grey-line {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  min-height: 250px;
+  background-color: #F4F4F4;
+  z-index: -1;
+}
+
 .contacts-page__title {
   font-size: 50px;
 }
@@ -3315,6 +3330,7 @@ img.mfp-img {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
+  min-width: 690px;
 }
 
 .contacts-page__inner-box {
@@ -3353,7 +3369,6 @@ img.mfp-img {
   grid-row-start: 2;
   margin-top: 120px;
   padding-bottom: 90px;
-  margin-top: 60px;
   grid-column: 6 span;
 }
 
@@ -3417,6 +3432,95 @@ img.mfp-img {
   align-items: center;
 }
 
+.error-page {
+  background-image: url(../img/404/404-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.error-page__logo {
+  padding: 80px 0;
+}
+
+.error-page__circle {
+  position: relative;
+  margin: auto;
+  width: 980px;
+  height: 980px;
+  border-radius: 50%;
+  background: #FBFBFB;
+  box-shadow: inset 9px -16px 48px rgba(0, 0, 0, 0.11);
+}
+
+.error-page__content {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  transform: translate(30%, -44%);
+  color: #081A3D;
+  max-width: 740px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-page__title {
+  font-size: 200px;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 110%;
+}
+
+.error-page__subtitle {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 190px;
+}
+
+.error-page__text {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.error-page__link {
+  position: relative;
+  margin-top: 25px;
+  background-color: #20C2FF;
+  padding: 16px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: all 0.2s;
+  color: white;
+}
+
+.error-page__link:after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(-45deg);
+  top: 21px;
+  right: 30px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.error-page__link:hover {
+  padding: 16px 50px 16px 28px;
+}
+
+.error-page__link:hover::after {
+  opacity: 1;
+}
+
 @media (max-width: 1920px) {
   .director__decor {
     width: 35%;
@@ -3462,6 +3566,32 @@ img.mfp-img {
     font-size: 26px;
     max-width: 470px;
     margin-bottom: 45px;
+  }
+
+  .error-page {
+    background-size: cover;
+  }
+
+  .error-page__circle {
+    width: 700px;
+    height: 700px;
+  }
+
+  .error-page__content {
+    color: #081A3D;
+    max-width: 520px;
+  }
+
+  .error-page__title {
+    font-size: 140px;
+  }
+
+  .error-page__subtitle {
+    font-size: 26px;
+  }
+
+  .error-page__text {
+    font-size: 20px;
   }
 }
 
@@ -3833,6 +3963,10 @@ img.mfp-img {
     padding-bottom: 50%;
   }
 
+  .contacts-page__grey-line {
+    min-height: 370px;
+  }
+
   .contacts-page__top {
     grid-column: 12 span;
   }
@@ -4018,6 +4152,62 @@ img.mfp-img {
 
   .hero__text {
     font-size: 16px;
+  }
+
+  .error-page__logo {
+    width: 120px;
+    padding: 50px 0 120px 0;
+  }
+
+  .error-page__circle {
+    background: none;
+    box-shadow: none;
+    top: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .error-page__content {
+    padding: 5px 0 100px 0;
+    color: #081A3D;
+    max-width: 330px;
+    position: relative;
+    transform: none;
+    top: 0;
+  }
+
+  .error-page__title {
+    font-size: 100px;
+    line-height: 115%;
+  }
+
+  .error-page__subtitle {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    margin-bottom: 115px;
+  }
+
+  .error-page__text {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .error-page__link {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .error-page__link::after {
+    display: none;
+  }
+
+  .error-page__link:hover {
+    padding: 12px 20px;
   }
 }
 
@@ -4928,6 +5118,14 @@ img.mfp-img {
     font-size: 16px;
     line-height: 140%;
     margin: 20px 0;
+  }
+
+  .contacts-page {
+    background-image: none;
+  }
+
+  .contacts-page__grey-line {
+    min-height: 350px;
   }
 
   .contacts-page__inner-box-title {
