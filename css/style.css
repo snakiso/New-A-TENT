@@ -1363,6 +1363,13 @@ img.mfp-img {
   left: 0;
 }
 
+.header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 5;
+}
+
 .header_opacity-bg {
   width: 100%;
   position: absolute;
@@ -1386,7 +1393,7 @@ img.mfp-img {
 
 .header__wrapper {
   max-width: 1600px;
-  height: 120px;
+  height: 100px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -3001,7 +3008,6 @@ img.mfp-img {
 .list-with-sidebar__sidebar-inner-container {
   padding: 60px 80px 60px 60px;
   top: 0px;
-  transition: all 0.2s;
 }
 
 .list-with-sidebar__sidebar-list {

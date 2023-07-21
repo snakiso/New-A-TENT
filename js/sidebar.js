@@ -1,30 +1,32 @@
-let sidebarContainer = document.querySelector('.list-with-sidebar__sidebar-inner-container'); //Контейнер сайдбара
 let sidebar = document.querySelector('.list-with-sidebar__sidebar'); //сайдбар
+let sidebarContainer = sidebar.querySelector('.list-with-sidebar__sidebar-inner-container'); //Контейнер сайдбара
 
+if (sidebar) {
+  window.addEventListener('scroll', () => {
+    let headerHeight = document.querySelector('.header').offsetHeight; //Высота хедера
+    let sidebarHeight = sidebar.offsetHeight; //высота сайдбара
+    let sidebarContainerHeight = sidebarContainer.offsetHeight; //высота контейнера 
+    let neededDistance = (sidebarHeight - sidebarContainerHeight - headerHeight); //Расстояние, которое надо пройти, чтобы контейнер остановился
 
+    //Если хедер статичен, то меняем значение headerHeight на 0!!!!
 
-window.addEventListener('scroll', () => {
-  let sidebarHeight = sidebar.offsetHeight; //высота сайдбара
-  let sidebarContainerHeight = sidebarContainer.offsetHeight; //высота контейнера 
-  let neededDistance = sidebarHeight - sidebarContainerHeight; //Расстояние, которое надо пройти, чтобы контейнер остановился
- 
-  console.log(neededDistance)
+    let distanceForTop = sidebar.getBoundingClientRect().top
+    if (distanceForTop <= headerHeight && distanceForTop >= -neededDistance) {
+      sidebarContainer.style.position = 'fixed';
+      sidebarContainer.style.top = `${headerHeight}px`;
+      sidebarContainer.style.bottom = 'auto'
+    } else if (distanceForTop <= -neededDistance) {
+      sidebarContainer.style.position = 'absolute';
+      sidebarContainer.style.bottom = '0'
+      sidebarContainer.style.top = 'auto'
+    } else {
+      sidebarContainer.style.position = 'absolute';
+      sidebarContainer.style.bottom = 'auto'
+      sidebarContainer.style.top = '0'
+    }
+  })
+}
 
-  let distanceForTop = sidebar.getBoundingClientRect().top
-  if (distanceForTop <= 0 && distanceForTop >= -neededDistance) {
-    sidebarContainer.style.position = 'fixed';
-    sidebarContainer.style.top = '0';
-    sidebarContainer.style.bottom = 'auto'
-  } else if (distanceForTop <= -neededDistance) {
-    sidebarContainer.style.position = 'absolute';
-    sidebarContainer.style.bottom = '0'
-    sidebarContainer.style.top = 'auto'
-  } else {
-    sidebarContainer.style.position = 'absolute';
-    sidebarContainer.style.bottom = 'auto'
-    sidebarContainer.style.top = '0'
-  }
-})
 
 let boxes = document.querySelectorAll('.list-with-sidebar__box'); // Основные элементы списка 
 let sidebarItems = document.querySelectorAll('.list-with-sidebar__sidebar-item'); //Элементы сайдбара
@@ -64,13 +66,7 @@ function init() {
 
       if (box.classList.contains('list-with-sidebar__box_unactive')) {
         box.style.maxHeight = `${boxTop.offsetHeight}px`
-      } else {
-        box.style.maxHeight = boxSummaryHeight
       }
-
-
-
-
 
       boxTop.addEventListener('click', () => {
         box.classList.toggle('list-with-sidebar__box_unactive')
@@ -82,6 +78,40 @@ function init() {
 
       })
     }
+  } else {
+    box.style.maxHeight = boxSummaryHeight
+  }
+}
+
+
+function init() {
+  var screenWidth = window.innerWidth;
+  for (let i = 0; i < boxTops.length; i++) {
+    let boxTop = boxTops[i];
+    let boxText = boxTexts[i];
+    let box = boxes[i];
+    let boxSummaryHeight = `${boxTop.offsetHeight + boxText.offsetHeight}px`;
+
+    if (screenWidth < 768) {
+      box.classList.add('list-with-sidebar__box_unactive');
+
+      if (box.classList.contains('list-with-sidebar__box_unactive')) {
+        box.style.maxHeight = `${boxTop.offsetHeight}px`
+      }
+
+      boxTop.addEventListener('click', () => {
+        box.classList.toggle('list-with-sidebar__box_unactive')
+        if (box.classList.contains('list-with-sidebar__box_unactive')) {
+          box.style.maxHeight = `${boxTop.offsetHeight}px`
+        } else {
+          box.style.maxHeight = boxSummaryHeight;
+        }
+
+      })
+    } else {
+      box.style.maxHeight = `fit-content`
+    }
+
   }
 }
 
